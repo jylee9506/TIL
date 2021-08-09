@@ -14,10 +14,9 @@ rl.on('line', line => {
 
 
     console.log((a + b)%c);  
-    console.log(a - b);  
-    console.log(a * b);  
-    console.log(Math.floor(a / b));  
-    console.log(a % b);  
+    console.log(((a % b)+(b%c))%c);  
+    console.log((a * b)%c);  
+    console.log(((a%c) * (b%c))%c);  
 
 
 
