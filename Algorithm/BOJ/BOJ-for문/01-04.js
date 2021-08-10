@@ -1,27 +1,19 @@
-const readline = require("readline");
+const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-let input = [];
-
-rl.on("line", function (line) {
-  input.push(parseInt(line));
-}).on("close", function () {
-
-  const x = input[0];
-  const y = input[1];
-
-  if (x > 0 && y > 0) {
-    console.log(1);
-  } else if (x < 0 && y > 0) {
-    console.log(2);
-  } else if (x < 0 && y < 0) {
-    console.log(3);
-  } else if (x > 0 && y < 0) {
-    console.log(4);
+let answer = '';
+rl.on('line', line => {
+  const input = line.split(' ');
+    
+  if(input.length === 2) {
+    const A = parseInt(input[0]);
+    const B = parseInt(input[1]);
+    answer += A+B + '\n';
   }
-
+}).on('close', () => {
+  console.log(answer);
   process.exit();
-});
+})

@@ -8,13 +8,15 @@ const rl = readline.createInterface({
 let input = [];
 
 rl.on('line', function (line) {
-  let n = Number(line);
-  let a ='';
-  for (let i = 1; i <= n; i++) {
-    a += i +'\n';
-  }
-  console.log(a);
+  input.push(line);
 }).on('close', function () {
+  let count = Number(input[0]);	
+  for (let i = 0; i < count; i++) {
+    num1 = Number(numbers[i][0]);
+    num2 = Number(numbers[i][1]);
 
+    console.log(`Case #${i} :${num1 + num2}`);
+  }
   process.exit();
 });
+
