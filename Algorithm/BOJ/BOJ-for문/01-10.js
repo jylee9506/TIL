@@ -10,16 +10,20 @@ const input = [];
 rl.on('line', function (line) {
     input.push(line);
 }).on('close', function () {
-    let n = Number(input[0][0]);
-    let X = Number(input[0][1]);
-    let numbers = (input[1].split(' '));
-    let answer = '';
-    
-    for (let i = 0; i < n; i++) {
-        if(numbers[i]<X){
-            answer+= numbers[i] + ' ';
+    // input[0] : 10 5
+    // input[1] : 1 10 4 9 2 3 8 5 7 6
+
+    let N = +input[0].split(' ')[0];
+    let X = +input[0].split(' ')[1];
+    let A = input[1].split(' ');
+    let result = [];
+
+    for (let i = 0; i < A.length; i++) {
+        if (A[i] < X) {
+            result.push(A[i]);
         }
     }
-    console.log(answer);
+    console.log(result.join(' '));
+
     process.exit();
 });
