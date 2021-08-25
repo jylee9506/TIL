@@ -6,10 +6,8 @@ const rl = readline.createInterface({
 });
 
 rl.on('line', function (input) {
-    // 입력받은 String을 Number로
     let inputNumber = +input;
 
-    // 왼쪽 숫자에 입력받은 숫자 ex) 26 / 오른쪽 숫자와 사이클의 길이는 0으로 초기화
     let lt = inputNumber;
     let newNumber = 0;
     let cnt = 0;
