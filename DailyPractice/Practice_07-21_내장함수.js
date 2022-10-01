@@ -196,6 +196,7 @@ console.log()
 // slice 사용하기////////////////////////////////////////////////
 const numberss = [10, 20, 30, 40];
 const sliced = numberss.slice(0, 2);
+console.log('slice')
 console.log(sliced);
 console.log(numberss);
 // slice 기존 배열을 건드리지 않고 splice는 기존 배열을 건드린다.
