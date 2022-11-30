@@ -1,4 +1,4 @@
-// 삼항 연산자
+ // 삼항 연산자
 //condition ? true : false
 //condition 이 true가 되면 전체가 true ,반대로 false 가 되면 전체가 false
 
