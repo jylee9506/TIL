@@ -79,3 +79,53 @@ function solution(n)
 function solution(n) {
     return String(n).split("").reverse().map((data) => Number(data))
 }
+// 7. 정수 제곱근 판별하기
+function solution(n) {
+    let num = Math.sqrt(n);
+    if(num % 1 === 0 ) return (num+1) * (num+1)
+    else return -1
+}
+
+//Math.sqrt 는 정수 제곱근 뽑아내는 내장 함수
+
+//8. 문자열 내 p와 y의 개수
+function solution(s){
+    let str = s.toLowerCase();
+    let pCnt = 0;
+    let yCnt = 0;
+
+    for(let i = 0; i < str.length; i++ ){
+        if(str[i] === "p"){
+            pCnt++
+        }else if(str[i] === "y"){
+            yCnt++
+        }
+    }
+
+    return (pCnt === yCnt) ? true : false;
+}
+
+//9. 하샤드 수
+function solution(x) {
+    let arr = x.toString().split('')
+    let sum = 0
+
+    for (let i in arr) {
+        sum += parseInt(arr[i])
+    }
+
+
+    return x % sum === 0 ? true : false;
+}
+
+// 10. x만큼 간격이 있는 n개의 숫자
+function solution(x, n) {
+    let answer = [];
+
+    for(let i = 1; i <= n; i++){
+        answer.push(i * x)
+
+    }
+
+    return answer;
+}

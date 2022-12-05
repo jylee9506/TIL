@@ -1,21 +1,13 @@
-function solution(n) {
-    let answer;
-    let x = 1;
+function solution(x, n) {
+    let answer = [];
 
-    while ( n > x){
-        if(x * x === n){
-            answer = (x + 1) * (x + 1)
-            break
-        }else if (x * x !== n){
-             x++
-        }
+    for(let i = 1; i <= n; i++){
+        answer.push(i * x)
 
-        answer = -1
     }
 
     return answer;
 }
-
-console.log(solution(121))
-console.log(solution(9))
-console.log(solution(3))
+console.log(solution(2,5))
+console.log(solution(4,3))
+console.log(solution(-4,2))
