@@ -1,13 +1,13 @@
-function solution(x, n) {
-    let answer = [];
+function solution(seoul) {
+    let answer = 0;
 
-    for(let i = 1; i <= n; i++){
-        answer.push(i * x)
-
+    for (let i = 0; i < seoul.length; i++) {
+        if(seoul[i] == "Kim"){
+            answer = i
+        }
     }
 
-    return answer;
+    return "김서방은 " + answer + "에 있다";
 }
-console.log(solution(2,5))
-console.log(solution(4,3))
-console.log(solution(-4,2))
+console.log(solution(["Jane", "Kim"]))
+
