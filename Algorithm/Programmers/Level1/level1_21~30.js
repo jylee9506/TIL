@@ -1,3 +1,5 @@
+// 21 가운데 글자 가져오기
+
 function solution(s) {
     let answer = "";
 
@@ -11,10 +13,3 @@ function solution(s) {
     return answer
 
 }
-
-
-console.log(solution("ABCDE"))
-console.log(solution("QWER"))
-
-
-

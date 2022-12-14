@@ -73,3 +73,80 @@
 
      return "김서방은 " + answer + "에 있다";
  }
+
+ // 16. 핸드폰 번호 가리기
+
+ function solution(phone_number) {
+     let answer = []
+     let temp = phone_number.split('')
+
+     for (let i = temp.length - 1; i >= 0; i--) {
+         if(i >= temp.length - 4){
+             answer.push(temp[i])
+         }else answer.push("*")
+     }
+
+     return answer.reverse().join("");
+ }
+
+ // 17. 나누어 떨어지는 숫자 배열열
+
+ function solution(arr, divisor) {
+     let answer = [];
+     arr = arr.sort((a,b) => a - b)
+
+     arr.forEach( (num) => {
+         if( num % divisor === 0){
+             answer.push(num)
+         }
+     })
+
+
+     return answer.length === 0 ? [-1] : answer;
+ }
+
+ // 18 가장 작은 수 제거하기
+ function solution(arr) {
+     let answer = [];
+     let minValue = Math.min(...arr);
+
+     if(arr.length > 1){
+         arr.forEach((num) => {
+             if(num > minValue ){
+                 answer.push(num)
+             }
+         })
+     }else return [-1]
+
+
+     return answer;
+ }
+
+ // 19 음양 더하기
+ function solution(absolutes, signs) {
+     let answer = 0;
+
+     for (let i = 0; i < absolutes.length; i++) {
+
+         if(signs[i]=== false){
+             absolutes[i] = -absolutes[i]
+         }
+
+         answer += absolutes[i]
+     }
+
+     return answer;
+ }
+
+ //20 없는 숫자 더하기
+ function solution(numbers) {
+     let answer = 0;
+
+     for (let i = 0; i < 10; i++) {
+         if(!numbers.includes(i)){
+             answer += i
+         }
+     }
+
+     return answer;
+ }
